@@ -49,17 +49,12 @@ const ProductItem = (items: {
         />
         <div className='flex flex-col'>
           <div className='font-bold text-white'>{name}</div>
-          <div className='font-bold text-white'>
-            {/* $
-            {quantity.find((item) => item.id === id)?.price *
-              quantity.find((item) => item.id === id)?.quantity} */}
-            ${totalPrice}
-          </div>
+          <div className='font-bold text-white'>${totalPrice}</div>
           <div>
             <div className='flex items-center gap-4'>
               <div
                 className='btn cursor-pointer
-              border-2 border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-black duration-300 ease-in-out
+              border-2 border-white text-white px-2 md:px-4 md:py-2 rounded-md hover:bg-white hover:text-black duration-300 ease-in-out
               '
                 onClick={handleDecreaseQuantity}
               >
@@ -70,7 +65,7 @@ const ProductItem = (items: {
               </div>
               <div
                 className='btn cursor-pointer
-              border-2 border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-black duration-300 ease-in-out
+              border-2 border-white text-white px-2 md:px-4 md:py-2 rounded-md hover:bg-white hover:text-black duration-300 ease-in-out
               '
                 onClick={handleIncreaseQuantity}
               >

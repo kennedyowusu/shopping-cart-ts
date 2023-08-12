@@ -1,4 +1,5 @@
 import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { FiShoppingBag } from 'react-icons/fi'
 import { BsTrash3 } from 'react-icons/bs'
 import { useAppDispatch, useAppSelector } from '../hooks/hooks'
 import { openCheckout, clearCart } from '../features/slices/checkoutSlice'
@@ -27,11 +28,11 @@ const Checkout = () => {
             >
               <AiOutlineCloseCircle className='text-2xl text-white rounded-full border-2 mr-2' />
               <div className='flex justify-between items-center w-full'>
-                <div className='text-2xl font-bold text-white select-none'>
-                  Close Checkout
+                <div className='text-lg md:text-xl font-bold text-white select-none'>
+                  Close
                 </div>
-                <div className='mt-2 text-white font-bold text-xl'>
-                  Shopping Bag (
+                <div className=' text-white font-bold text-lg md:text-xl flex justify-center items-center '>
+                  <FiShoppingBag className='text-2xl text-white mr-2' /> (
                   {items.reduce((acc, item) => {
                     return acc + item.quantity
                   }, 0)}
@@ -52,13 +53,13 @@ const Checkout = () => {
           </div>
           <div className='mx-5'>
             <div className='flex justify-between items-center mb-5'>
-              <div className='text-white font-bold text-xl'>
+              <div className='text-white font-bold text-lg md:text-xl'>
                 Total Amount: $
                 {items.reduce((acc, item) => {
                   return acc + item.price * item.quantity
                 }, 0)}
               </div>
-              <div className='text-white font-bold text-xl flex justify-between'>
+              <div className='text-white font-bold text-lg md:text-xl flex justify-between'>
                 Total Items: {items.length}
               </div>
             </div>
